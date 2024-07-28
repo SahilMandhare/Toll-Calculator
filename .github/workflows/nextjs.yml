@@ -34,11 +34,11 @@ jobs:
       - name: Detect package manager
         id: detect-package-manager
         run: |
-          if [ -f "/home/runner/work/Toll-Calculator/Toll-Calculator/yarn.lock" ]; then
+          if [ -f "/home/runner/work/Toll-Calculator/Toll-Calculator/toll-calculator/yarn.lock" ]; then
             echo "manager=yarn" > $GITHUB_ENV
             echo "command=install" > $GITHUB_ENV
             echo "runner=yarn" > $GITHUB_ENV
-          elif [ -f "/home/runner/work/Toll-Calculator/Toll-Calculator/package.json" ]; then
+          elif [ -f "/home/runner/work/Toll-Calculator/Toll-Calculator/toll-calculator/package.json" ]; then
             echo "manager=npm" > $GITHUB_ENV
             echo "command=ci" > $GITHUB_ENV
             echo "runner=npx --no-install" > $GITHUB_ENV
